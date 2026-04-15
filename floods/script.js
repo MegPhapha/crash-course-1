@@ -1,29 +1,45 @@
-// 1. Initialize the map centered on Ghana
-// Latitude: 7.9465, Longitude: -1.0232 is roughly the center of Ghana
-const map = L.map('map').setView([7.9465, -1.0232], 7);
+// 1. Initialize the map centered globally
+const map = L.map('map').setView([20, 0], 2);
 
-// 2. Add OpenStreetMap tiles (the background map)
+// 2. Add OpenStreetMap tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 
-// 3. Load the GeoJSON file we just created
-fetch('GhanaFloods.geojson')
-    .then(response => response.json())
-    .then(data => {
-        // 4. Add the GeoJSON data to the map
-        L.geoJSON(data, {
-            onEachFeature: function (feature, layer) {
-                // 5. Add a popup with the city and date for each point
-                if (feature.properties) {
-                    const city = feature.properties.City;
-                    const date = feature.properties.Date;
-                    layer.bindPopup(`<h3>${city}</h3><p>Flood reported on: ${date}</p>`);
-                }
+// 3. Load and parse the CSV data using PapaParse
+Papa.parse('rimes_flood_data.csv', {
+    download: true,
+    header: true,
+    complete: function(results) {
+        const data = results.data;
+        
+        // 4. Loop through each row in the CSV
+        data.forEach(row => {
+            const lat = parseFloat(row.lat);
+            const lng = parseFloat(row.long);
+            
+            // Check if coordinates are valid
+            if (!isNaN(lat) && !isNaN(lng)) {
+                // 5. Create a marker for each flood event
+                const marker = L.marker([lat, lng]).addTo(map);
+                
+                // 6. Add a popup with event details
+                const popupContent = `
+                    <div style="font-family: 'Inter', sans-serif;">
+                        <h3 style="margin: 0; color: #2c3e50;">${row.Country}</h3>
+                        <p style="margin: 5px 0 0; font-size: 14px; color: #7f8c8d;">
+                            <b>Date:</b> ${row.Began} to ${row.Ended}<br>
+                            <b>Cause:</b> ${row.MainCause}<br>
+                            <b>Impact:</b> ${row.Dead} dead, ${row.Displaced} displaced
+                        </p>
+                    </div>
+                `;
+                marker.bindPopup(popupContent);
             }
-        }).addTo(map);
-    })
-    .catch(error => {
-        console.error('Error loading the GeoJSON file:', error);
-    });
+        });
+    },
+    error: function(err) {
+        console.error("Error loading CSV:", err);
+    }
+});
