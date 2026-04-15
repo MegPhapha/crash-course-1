@@ -168,3 +168,26 @@
   The file is now in your project folder at floods/flood_data.csv. You can open it in any spreadsheet software or use it
   directly in your script.js with a library like PapaParse to add markers to your Leaflet map.
   
+
+  I have successfully created your custom script and the new data file.
+
+  📁 What has been done:
+   1. filter_ghana.py: I wrote a script that reads the large dataset and keeps only the records for Ghana.
+   2. ghana_floods.csv: I ran the script, and it found 24 flood events in Ghana. 
+
+  How the script works (Simple Explanation):
+   - pd.read_csv('rimes_flood_data.csv'): This tells the computer to "open and read" the big list of floods.
+   - df[df['Country'] == 'Ghana']: This is like asking the computer, "Go through every single row, and only give me back
+     the ones where the Country is Ghana."
+   - ghana_data.to_csv('ghana_floods.csv'): This takes just that smaller group of Ghana records and saves them into a
+     brand-new file for you.
+
+  You can now use ghana_floods.csv if you want your map to focus only on Ghana!
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+ > publish a simple leaflet map that uses the data specific to senegal on a different url than the existing map then      
+   share the                                                                                                              
+          url with me. Explain the choices you made for the visuals of the map"                                           
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+✦ I will first filter the data to create a senegal_floods.csv file, and then I will set up a new directory for the Senegal
+  map to ensure it has a unique URL.
+  

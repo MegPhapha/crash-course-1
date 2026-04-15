@@ -1,0 +1,10 @@
+ID,GlideNumber,Country,OtherCountry,long,lat,Area,Began,Ended,Validation,Dead,Displaced,MainCause,Severity
+241,0,Senegal ,0,-17.0028,14.7289,1307.63,09-02-88,09-02-88,News,4,2400,Heavy rain,1.0
+1008,0,Senegal,0,-15.0548,15.8268,47808.22,09-24-95,10-08-95,News,0,0,Heavy rain,1.0
+1866,0,Senegal,0,-14.6405,15.5553,62705.79,01-09-02,01-12-02,News,28,80000,Heavy rain,1.0
+2316,0,Senegal,Mauritania,-12.9402,15.9392,586302.53,08-09-03,11-05-03,News,10,5300,Heavy rain,1.0
+2729,0,Senegal,0,-17.3737,14.7558,333.207,08-20-05,09-10-05,News,0,5600,Heavy rain,1.0
+3180,FL-2007-000131-SEN,Senegal,,-13.9678,15.4745,167997.63,08-31-07,09-20-07,News,1,0,Heavy rain,1.0
+3531,FL-2009-000164-SEN,Senegal,0,-16.8108,14.5762,8510.69,08-24-09,08-26-09,0,0,0,Heavy Rain,1.0
+3971,,Senegal,,-15.4943,14.462,79242.7,08-24-12,08-29-12,News,4,1200,Torrential Rain,1.5
+4808,,Senegal,,-15.5163,15.5202,60942.37,09-10-19,09-20-19,FloodList,0,4500,Heavy Rain,1.0
