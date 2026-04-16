@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Data Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌊 Flood Archive Dashboard</h1>
+            <p>Visualizing global flood data from 1985 to 2021</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="grid">
+            <!-- Card 1: Top 20 Countries -->
+            <div class="card">
+                <h2>Top 20 Countries by Flood Events</h2>
+                <div class="chart-container">
+                    <canvas id="countryChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Card 2: Events per Year -->
+            <div class="card">
+                <h2>Flood Events per Year</h2>
+                <div class="chart-container">
+                    <canvas id="yearChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Card 3: Events by Category -->
+            <div class="card">
+                <h2>Events by Main Cause</h2>
+                <div class="chart-container">
+                    <canvas id="causeChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Card 4: Displaced by Severity -->
+            <div class="card">
+                <h2>Total Displaced by Severity</h2>
+                <div class="chart-container">
+                    <canvas id="severityChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Data source: Rimes Flood Data Archive</p>
+        </div>
+    </footer>
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

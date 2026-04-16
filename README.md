@@ -4,8 +4,9 @@ An interactive mapping project visualizing historical flood events and analyzing
 
 ## 🚀 Live Interactive Maps
 
-Explore the data through these live Leaflet-powered maps:
+Explore the data through these live Leaflet-powered maps and charts:
 
+*   **[📊 Flood Data Dashboard](https://megphapha.github.io/crash-course-1/dashboard/)** - New interactive charts showing global trends, top countries, and impact analysis.
 *   **[🌍 Global Flood Archive](https://megphapha.github.io/crash-course-1/)** - Comprehensive view of 5,000+ major flood events worldwide since 1985.
 *   **[🇬🇭 Ghana Risk Dashboard](https://megphapha.github.io/crash-course-1/ghana-floods/)** - Advanced analysis identifying health sites within 1km of flood zones in Ghana, featuring pulsing markers and layer filtering.
 *   **[🇸🇳 Senegal Flood History](https://megphapha.github.io/crash-course-1/senegal-floods/)** - Focused historical view of major flood events in Senegal.
