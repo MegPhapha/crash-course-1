@@ -3,183 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global & Local Flood Risk Analysis | Home</title>
+    <title>Global & Local Flood Risk Analysis | Project Archive</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Top Navigation Menu -->
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-content">
-            <div class="logo">🌊 <span>FloodRisk</span> Project</div>
+            <div class="logo">🌊 FloodRisk <span>Sentinel</span></div>
             <ul class="nav-links">
-                <li><a href="#tools">Explore</a></li>
+                <li><a href="#about">The Project</a></li>
                 <li><a href="#methodology">Methodology</a></li>
-                <li><a href="#datasets">Data</a></li>
+                <li><a href="#tools">Operational Interfaces</a></li>
+                <li><a href="#data">Data Infrastructure</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero">
-        <div class="container">
-            <div class="badge">ICT4D Crash Course 2026</div>
-            <h1>Visualizing Global Flood Risk</h1>
-            <p class="hero-desc">An interactive analysis of historical flood events and their impact on critical health infrastructure. Leveraging open data to identify risks and build resilience.</p>
-            <div class="hero-btns">
-                <a href="global-archive/" class="btn">Launch Global Map</a>
-                <a href="#methodology" class="btn secondary">Read Methodology</a>
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <div class="status-badge">Project Status: Phase 2.0 (Active)</div>
+                <h1>Bridging the Granularity Gap in Flood Risk</h1>
+                <p>An interactive spatial intelligence platform visualizing 35+ years of historical flood events and their intersection with critical health infrastructure.</p>
+                <div class="hero-btns">
+                    <a href="#tools" class="btn">Explore Interfaces</a>
+                    <a href="https://github.com/MegPhapha/crash-course-1" class="btn secondary">View Source Code</a>
+                </div>
             </div>
-        </div>
-        <div class="wave-container">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#f8fafc" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,133.3C960,149,1056,203,1152,213.3C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-            </svg>
+            <div class="hero-visual">
+                <div class="stats-box">
+                    <div class="stat-item">
+                        <span class="stat-num">5,130</span>
+                        <span class="stat-label">Flood Events</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">162</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">2,145</span>
+                        <span class="stat-label">Health Sites</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
     <main class="container">
-        <!-- Interactive Apps Section -->
-        <section id="tools" class="section">
-            <div class="section-header">
-                <h2 class="section-title">Interactive Analysis Tools</h2>
-                <p>Explore our suite of mapping and visualization applications.</p>
+        <!-- The Project Section -->
+        <section id="about" class="section">
+            <div class="section-grid">
+                <div class="section-info">
+                    <h2 class="section-title">The Project</h2>
+                    <p>This project was developed as part of the <strong>ICT4D Crash Course 2026</strong>. It aims to demonstrate the power of Open Data and Geospatial analysis in addressing global environmental challenges. By visualizing historical trends and local risks, we provide a foundation for data-driven resilience planning.</p>
+                </div>
+                <div class="section-info">
+                    <h3 class="subsection-title">Core Goals</h3>
+                    <ul class="goals-list">
+                        <li><strong>Visibility:</strong> Centralizing 35 years of global flood records.</li>
+                        <li><strong>Precision:</strong> Identifying infrastructure at risk within a 1km buffer.</li>
+                        <li><strong>Accessibility:</strong> Providing open tools for custom dataset mapping.</li>
+                    </ul>
+                </div>
             </div>
+        </section>
+
+        <!-- Operational Interfaces (The Tools) -->
+        <section id="tools" class="section">
+            <h2 class="center-title">Operational Interfaces</h2>
             <div class="grid">
-                <!-- Global Archive Card -->
+                <!-- Global Map -->
                 <div class="card">
-                    <div class="card-icon">🌍</div>
-                    <h3>Global Flood Archive</h3>
-                    <p>Visualizing 5,000+ major flood events since 1985 with detailed impact metrics.</p>
-                    <a href="global-archive/" class="card-link">Explore Map &rarr;</a>
+                    <div class="card-header">
+                        <span class="card-icon">🌍</span>
+                        <h3>Global Flood Archive</h3>
+                    </div>
+                    <p>Strategic overview of 5,000+ major flood events. Filter by country, cause, and severity.</p>
+                    <div class="card-tech">Leaflet.js · PapaParse</div>
+                    <a href="global-archive/" class="card-btn">Open Interface</a>
                 </div>
 
-                <!-- Ghana Dashboard Card -->
-                <div class="card">
-                    <div class="card-icon">🇬🇭</div>
-                    <h3>Ghana Risk Dashboard</h3>
-                    <p>Advanced spatial analysis identifying health facilities within 1km of flood zones.</p>
-                    <a href="ghana-floods/" class="card-link">Explore Ghana &rarr;</a>
+                <!-- Ghana Dashboard -->
+                <div class="card highlight">
+                    <div class="card-header">
+                        <span class="card-icon">🇬🇭</span>
+                        <h3>Ghana Risk Map</h3>
+                    </div>
+                    <p>High-granularity analysis of health sites within 1km of flood zones in Ghana.</p>
+                    <div class="card-tech">Python · Haversine · OSM</div>
+                    <a href="ghana-floods/" class="card-btn">Open Interface</a>
                 </div>
 
-                <!-- Data Dashboard Card -->
+                <!-- Data Insights -->
                 <div class="card">
-                    <div class="card-icon">📊</div>
-                    <h3>Historical Insights</h3>
-                    <p>Comparative analysis of flood causes, severity, and displacement trends over time.</p>
-                    <a href="dashboard/" class="card-link">View Charts &rarr;</a>
+                    <div class="card-header">
+                        <span class="card-icon">📊</span>
+                        <h3>Hazard Analytics</h3>
+                        <span class="badge-new">New</span>
+                    </div>
+                    <p>Visualizing global flood trends, yearly frequencies, and displacement impacts.</p>
+                    <div class="card-tech">Chart.js · DataViz</div>
+                    <a href="dashboard/" class="card-btn">Open Interface</a>
                 </div>
 
-                <!-- Dataset Mapper Card -->
+                <!-- CSV Mapper -->
                 <div class="card">
-                    <div class="card-icon">🗺️</div>
-                    <h3>Universal Dataset Mapper</h3>
-                    <p>Browser-based tool to instantly map any CSV dataset with coordinate columns.</p>
-                    <a href="mapper/" class="card-link">Launch Mapper &rarr;</a>
+                    <div class="card-header">
+                        <span class="card-icon">🗺️</span>
+                        <h3>CSV Ingest Portal</h3>
+                    </div>
+                    <p>Universal browser-based tool to instantly map any dataset with coordinate columns.</p>
+                    <div class="card-tech">Client-Side · Drag & Drop</div>
+                    <a href="mapper/" class="card-btn">Open Interface</a>
                 </div>
             </div>
         </section>
 
         <!-- Methodology Section -->
-        <section id="methodology" class="section bg-light">
+        <section id="methodology" class="section dark-bg">
             <div class="section-header">
-                <h2 class="section-title">Analysis Methodology</h2>
-                <p>How we transformed raw open data into actionable insights.</p>
+                <h2 class="section-title white">Research & Methodology</h2>
+                <p class="white-faded">The analytical pipeline used to transform raw data into intelligence.</p>
             </div>
-            <div class="methodology-grid">
-                <div class="method-card">
-                    <div class="num">01</div>
-                    <h4>Data Ingestion</h4>
-                    <p>Extracted 35 years of global flood records from the RIMES/DFO Archive and infrastructure data from OpenStreetMap.</p>
+            <div class="method-steps">
+                <div class="step">
+                    <div class="step-num">01</div>
+                    <h4>Extraction</h4>
+                    <p>Automated extraction of 35 years of flood records from the RIMES/DFO Archive and infrastructure coordinates via Overpass API (OSM).</p>
                 </div>
-                <div class="method-card">
-                    <div class="num">02</div>
-                    <h4>Spatial Analysis</h4>
-                    <p>Used Python and the Haversine formula to calculate distances between 2,145 health sites and 24 historic flood events in Ghana.</p>
+                <div class="step">
+                    <div class="step-num">02</div>
+                    <h4>Spatial Processing</h4>
+                    <p>Application of the Haversine formula to calculate spherical distances between point-based flood events and polygonal health facilities.</p>
                 </div>
-                <div class="method-card">
-                    <div class="num">03</div>
-                    <h4>Risk Categorization</h4>
-                    <p>Identified facilities within a 1km "Risk Buffer" to prioritize emergency preparedness and infrastructure resilience.</p>
+                <div class="step">
+                    <div class="step-num">03</div>
+                    <h4>Risk Filtering</h4>
+                    <p>Classification of "At-Risk" facilities based on a defined 1,000m proximity threshold to historical flood centers.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Tools Used Section -->
-        <section class="section">
-            <div class="section-header">
-                <h2 class="section-title">Built with Open Technology</h2>
-                <p>Our project is powered by open-source libraries and APIs.</p>
-            </div>
-            <div class="tools-list">
-                <div class="tool-tag">Leaflet.js</div>
-                <div class="tool-tag">Chart.js</div>
-                <div class="tool-tag">PapaParse</div>
-                <div class="tool-tag">OpenStreetMap</div>
-                <div class="tool-tag">Python/Pandas</div>
-                <div class="tool-tag">Overpass API</div>
-            </div>
-        </section>
-
-        <!-- Datasets Section -->
-        <section id="datasets" class="section">
-            <div class="section-header">
-                <h2 class="section-title">Open Data Sources</h2>
-                <p>Full transparency of the datasets driving this project.</p>
-            </div>
-            <div class="dataset-container">
-                <div class="dataset-item">
-                    <div class="dataset-meta">
-                        <span class="label">Name</span>
-                        <div class="value">Global Flood Archive</div>
-                    </div>
-                    <div class="dataset-meta">
-                        <span class="label">Source</span>
-                        <div class="value"><a href="https://ckan.rdas.live/dataset/global-active-archive-of-large-flood-events">RIMES / DFO</a></div>
-                    </div>
-                    <div class="dataset-meta">
-                        <span class="label">Format</span>
-                        <div class="value">CSV</div>
-                    </div>
-                    <div class="dataset-meta">
-                        <span class="label">Date</span>
-                        <div class="value">April 15, 2026</div>
-                    </div>
-                </div>
-
-                <div class="dataset-item">
-                    <div class="dataset-meta">
-                        <span class="label">Name</span>
-                        <div class="value">Ghana Health Sites</div>
-                    </div>
-                    <div class="dataset-meta">
-                        <span class="label">Source</span>
-                        <div class="value"><a href="https://www.openstreetmap.org/">OpenStreetMap</a></div>
-                    </div>
-                    <div class="dataset-meta">
-                        <span class="label">Format</span>
-                        <div class="value">JSON</div>
-                    </div>
-                    <div class="dataset-meta">
-                        <span class="label">Date</span>
-                        <div class="value">April 15, 2026</div>
-                    </div>
-                </div>
+        <!-- Data Infrastructure (Metadata) -->
+        <section id="data" class="section">
+            <h2 class="center-title">Data Infrastructure</h2>
+            <div class="data-table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Dataset Name</th>
+                            <th>Primary Source</th>
+                            <th>Format</th>
+                            <th>Last Update</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RIMES Global Archive</td>
+                            <td>Dartmouth Flood Observatory</td>
+                            <td>CSV</td>
+                            <td>April 15, 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Ghana Health Sites</td>
+                            <td>OpenStreetMap (OSM)</td>
+                            <td>JSON</td>
+                            <td>April 15, 2026</td>
+                        </tr>
+                        <tr>
+                            <td>Senegal Flood History</td>
+                            <td>RIMES Filtered</td>
+                            <td>CSV</td>
+                            <td>April 15, 2026</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">🌊 FloodRisk Project</div>
-                <p>This project was developed as part of the ICT4D Crash Course to demonstrate the power of Open Data and Geospatial analysis.</p>
-                <div class="footer-bottom">
-                    &copy; 2026 | Built with ❤️ for Global Resilience
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">🌊 FloodRisk Project</div>
+                    <p>A data-driven initiative for the ICT4D Crash Course 2026. Empowering communities through Open Geospatial Intelligence.</p>
                 </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="global-archive/">Global Map</a></li>
+                        <li><a href="ghana-floods/">Ghana Dashboard</a></li>
+                        <li><a href="dashboard/">Data Insights</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 | Built for Global Resilience | <a href="https://github.com/MegPhapha/crash-course-1">GitHub</a>
             </div>
         </div>
     </footer>
