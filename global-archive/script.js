@@ -8,7 +8,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // 3. Load and parse the CSV data using PapaParse
-Papa.parse('data/rimes_flood_data.csv', {
+Papa.parse('../data/rimes_flood_data.csv', {
     download: true,
     header: true,
     complete: function(results) {

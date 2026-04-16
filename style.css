@@ -1,57 +1,234 @@
-body, html {
+/* Root Styles for Landing Page */
+:root {
+    --primary: #3498db;
+    --secondary: #2c3e50;
+    --bg: #f8fafc;
+    --text: #1e293b;
+    --light-text: #64748b;
+    --white: #ffffff;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.nav-links {
+    list-style: none;
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: 'Inter', sans-serif;
+    display: flex;
+    gap: 25px;
 }
 
-#map {
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-}
-
-.overlay {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 15px 25px;
-    border-radius: 12px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
-    z-index: 1000;
-    pointer-events: none;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.overlay h1 {
-    margin: 0;
-    font-size: 24px;
-    color: #1a1a1a;
-    font-weight: 700;
-}
-
-.overlay p {
-    margin: 5px 0 0;
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 600;
     font-size: 14px;
-    color: #4a4a4a;
+    transition: color 0.2s;
 }
 
-/* Leaflet Popup Styling */
-.leaflet-popup-content-wrapper {
-    border-radius: 8px;
-    padding: 5px;
+.nav-links a:hover {
+    color: var(--primary);
 }
 
-.leaflet-popup-content h3 {
-    margin: 0 0 5px;
-    font-size: 16px;
-    color: #2c3e50;
+/* Hero Section */
+.hero {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    border-bottom: 1px solid #e2e8f0;
 }
 
-.leaflet-popup-content p {
-    margin: 0;
+.hero h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin: 0 0 20px;
+    letter-spacing: -1px;
+}
+
+.hero-desc {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    color: var(--light-text);
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 28px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn.secondary {
+    background: var(--white);
+    color: var(--secondary);
+    border: 1px solid #e2e8f0;
+}
+
+.btn.secondary:hover {
+    background: #f8fafc;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Sections */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Grid & Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s;
+    border: 1px solid #f1f5f9;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card-icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.card p {
+    color: var(--light-text);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Datasets Table-ish Cards */
+.dataset-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dataset-item {
+    background: var(--white);
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    align-items: center;
+    border: 1px solid #f1f5f9;
+}
+
+.dataset-meta .label {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--light-text);
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+
+.dataset-meta .value {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dataset-meta a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid #e2e8f0;
+    color: var(--light-text);
     font-size: 13px;
-    color: #7f8c8d;
+}
+
+@media (max-width: 600px) {
+    .hero h1 { font-size: 32px; }
+    .nav-content { flex-direction: column; gap: 15px; }
+    .grid { grid-template-columns: 1fr; }
 }
