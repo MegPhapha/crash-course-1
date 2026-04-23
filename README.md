@@ -2,15 +2,17 @@
 
 An interactive mapping project visualizing historical flood events and analyzing their impact on health infrastructure. This project was developed as part of a crash course to demonstrate the power of Open Data and Geospatial analysis.
 
-## 🚀 Live Interactive Maps
+## ✅ Summary of Your Project Suite
 
-Explore the data through these live Leaflet-powered maps and charts:
+1. 🌍 Global Flood Archive (https://megphapha.github.io/crash-course-1/global-archive/): The comprehensive database of 5,000+ flood events.
 
-*   **[🗺️ Drag-and-Drop Dataset Mapper](https://megphapha.github.io/crash-course-1/mapper/)** - Upload and visualize your own CSV datasets instantly in the browser.
-*   **[📊 Flood Data Dashboard](https://megphapha.github.io/crash-course-1/dashboard/)** - New interactive charts showing global trends, top countries, and impact analysis.
-*   **[🌍 Global Flood Archive](https://megphapha.github.io/crash-course-1/)** - Comprehensive view of 5,000+ major flood events worldwide since 1985.
-*   **[🇬🇭 Ghana Risk Dashboard](https://megphapha.github.io/crash-course-1/ghana-floods/)** - Advanced analysis identifying health sites within 1km of flood zones in Ghana, featuring pulsing markers and layer filtering.
-*   **[🇸🇳 Senegal Flood History](https://megphapha.github.io/crash-course-1/senegal-floods/)** - Focused historical view of major flood events in Senegal.
+2. 📊 Hazard Analytics (https://megphapha.github.io/crash-course-1/dashboard/): Interactive charts showing trends, causes, and impacts.
+
+3. 🇬🇭 Ghana Risk Map (https://megphapha.github.io/crash-course-1/ghana-floods/): Spatial analysis of health sites in flood zones.
+
+4. 🇸🇳 Senegal History (https://megphapha.github.io/crash-course-1/senegal-floods/): Targeted historical mapping for Senegal.
+
+5. 🗺️ CSV Ingest Portal (https://megphapha.github.io/crash-course-1/mapper/): The universal drag-and-drop tool for any dataset.
 
 ---
 
@@ -36,9 +38,11 @@ This project relies on the following high-quality open data repositories:
 *   `/data/` - Raw datasets including the full global flood archive (CSV) and health site coordinates (JSON).
 *   `/scripts/` - Python scripts for data filtering and spatial risk analysis (e.g., Haversine distance calculations).
 *   `/dashboard/` - Interactive data dashboard with cards for top countries, year-over-year trends, and impact analysis using Chart.js.
+*   `/mapper/` - Drag-and-drop tool to visualize any custom CSV dataset.
+*   `/global-archive/` - The comprehensive world-view map of 5,000+ flood events.
 *   `/ghana-floods/` - Localized map for Ghana with advanced risk highlighting.
 *   `/senegal-floods/` - Localized map for Senegal.
-*   `index.html` / `script.js` / `style.css` - The main global map located at the project root.
+*   `index.html` / `style.css` - The main project landing page (home).
 
 ---
 
